@@ -1,0 +1,42 @@
+=> Web development : 
+    1. Website
+    2. Webapp
+
+    Basic : 
+        1. HTML : Hyper text  Markup Language : Completed
+                - To Create Structure of Website.
+
+        2. CSS : Cascading Style Sheet     : start
+                - To Design a Structure
+
+        3. JS : Javascript : soon
+                - To Add Functionality
+
+
+
+CSS :  Cascading Style Sheet 
+
+USE : (Advantage)
+- To Design a Structure
+- To Make Responsive Website 
+- To Make Website Loader Fast
+
+
+DisAdvantage : 
+- Version of CSS 
+    - CSS CSS2 CSS3(Latest)
+
+
+Extension : .css 
+
+
+Note : 
+    We can use HTML without CSS. but we can't use CSS without HTML.
+
+
+
+
+
+
+
+
