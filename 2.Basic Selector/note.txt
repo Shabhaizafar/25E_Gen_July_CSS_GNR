@@ -1,0 +1,16 @@
+Element Selector : 
+    Same design for same Elements
+
+Class Selector : 
+    Same design for different Elements
+
+Id Selector : 
+    if you want to Design any Single Elements 
+
+
+
+Note : 
+    - We can use same class value with same or different Elements.
+
+    - We can't use same id value with same or different Elements.
+    - that's means Id always Unique.
