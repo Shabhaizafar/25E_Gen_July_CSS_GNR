@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+    <style>
+        img{
+            /* 
+                blur :  px 
+                default : 0px
+            */
+            /* filter: blur(10px); */
+
+
+            /*
+                opacity : 0-1
+                default : 1
+            */
+            /* filter: opacity(.2); */
+
+            
+
+
+            /* 
+                gray-scale : 0-1
+                default : 0
+             */
+            /* filter: grayscale(1); */
+
+            /* 0-360 deg*/
+            /* filter: hue-rotate(270deg); */
+
+
+            /* filter: invert(1); */
+
+            /* filter: drop-shadow(5px 5px 10px blue); */
+          
+        }
+        img:hover{
+              filter: invert(1) drop-shadow(5px 5px 10px red);
+        }
+        .sepia{
+            /* 
+                sepia : 0-1
+                default : 0
+             */
+            filter: sepia(1);
+        }
+
+
+        /* %  
+            default : 100%
+         */
+        .brightness{
+            filter: brightness(300%);
+        }
+        .saturate {
+            filter: saturate(300%);
+        }
+        .contrast {
+            filter: contrast(300%);
+        }
+
+        /* Hover */
+        /* img:hover{
+            filter: blur(0px);
+        } */
+    </style>
+</head>
+<body>
+    <img src="https://imgs.search.brave.com/aYEUMkve3idP7wrewJE3jFcLqK3aaCPJ88wyttfW1hE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvRmly/ZWZveC1QTkctUGhv/dG8ucG5n" width="200px" alt="">
+    <img src="https://imgs.search.brave.com/aYEUMkve3idP7wrewJE3jFcLqK3aaCPJ88wyttfW1hE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvRmly/ZWZveC1QTkctUGhv/dG8ucG5n" width="200px" alt="" class="brightness">
+    <img src="https://imgs.search.brave.com/aYEUMkve3idP7wrewJE3jFcLqK3aaCPJ88wyttfW1hE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvRmly/ZWZveC1QTkctUGhv/dG8ucG5n" width="200px" alt="" class="saturate">
+    <img src="https://imgs.search.brave.com/aYEUMkve3idP7wrewJE3jFcLqK3aaCPJ88wyttfW1hE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvRmly/ZWZveC1QTkctUGhv/dG8ucG5n" width="200px" alt="" class="contrast">
+    <img src="https://imgs.search.brave.com/aYEUMkve3idP7wrewJE3jFcLqK3aaCPJ88wyttfW1hE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTMvRmly/ZWZveC1QTkctUGhv/dG8ucG5n" width="200px" alt="" class="sepia">
+</body>
+</html>
