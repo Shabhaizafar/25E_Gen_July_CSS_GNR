@@ -3,21 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Simple Styled Page</title>
-  <!-- 
-    CSS Task Instructions:
+  <style>
+    /* Universal Selector */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    1. Apply the universal selector (*) to set `box-sizing` to `border-box`, and to remove all default `margin` and `padding` across elements.
+    /* Type Selector */
+    body {
+      width: 100%;
+      height: 100vh;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
 
-    2. Use the `body` type selector to set the `width` to 100%, `height` to 100vh, and apply `padding` of 20px. Also, set a light background color for visual clarity.
+    /* Class Selector */
+    .card {
+      width: 300px;
+      height: 200px;
+      margin: 20px auto;
+      padding: 15px;
+      background-color: #fff;
+      filter: drop-shadow(2px 4px 6px gray);
+    }
 
-    3. Create a class `.card` and apply it to the main content container. Style it with a `width` of 300px, `height` of 200px, `margin` of 20px auto (to center it), `padding` of 15px, and set the `background-color` to white. Also, use the `filter` property to apply a drop shadow effect like `drop-shadow(2px 4px 6px gray)`.
+    /* ID Selector */
+    #title {
+      margin-bottom: 10px;
+      padding: 5px;
+      text-align: center;
+      background-color: #4CAF50;
+      color: white;
+    }
 
-    4. Create an ID selector `#title` for the heading. Set `margin-bottom` to 10px and `padding` to 5px. Align the text to the center, and use a background color (such as green) with white text for contrast.
-
-    5. For the `<p>` tag, add a `margin-top` of 10px and `padding` of 10px to separate it visually from other elements.
-
-    Use only the listed CSS properties: width, height, margin, padding, box-sizing, filter, and selectors (type, class, ID, universal).
-  -->
+    p {
+      margin-top: 10px;
+      padding: 10px;
+    }
+  </style>
 </head>
 <body>
 

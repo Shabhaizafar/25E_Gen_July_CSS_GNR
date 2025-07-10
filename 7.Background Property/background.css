@@ -1,0 +1,67 @@
+body{
+    /* background-color: red; */
+}
+ul{
+    /* background-color: aqua; */
+}
+
+
+/* 
+body : design >> wrapper 
+*/
+
+div{
+    width: 100%;
+    height: 650px;
+
+    border: 1px solid black;  /*ignore*/
+
+    /* colorname,hexa,rgb,rgba,hsl,hsla */
+    /* background-color: aqua; */
+    /* background-color: #ffef00; */
+
+    /* background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVza3RvcCUyMHdhbGxwYXBlcnN8ZW58MHx8MHx8fDA%3D); */
+    /* background-image: url('https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVza3RvcCUyMHdhbGxwYXBlcnN8ZW58MHx8MHx8fDA%3D'); */
+
+    background-image: url("https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGVza3RvcCUyMHdhbGxwYXBlcnN8ZW58MHx8MHx8fDA%3D");
+                /* width */
+    /* background-size: 300px; */
+
+                    /* width height */
+    background-size: 320px 250px;
+    /* background-size: 100% 250px; */
+    /* background-size: 100% 100%; */
+    
+    /* background-size: cover; */
+    /* background-size: contain; */
+    /* background-size: contain cover;   */ /*wrong*/
+
+
+                /* default  */
+    /* background-repeat: repeat; */
+    /* background-repeat: no-repeat; */
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+
+    /* background-repeat: space; */
+    /* background-repeat: round; */
+
+
+                    /* default */
+    /* background-position: left top; */
+    /* background-position: top left; */
+    /* background-position: 0px 0px; */
+    /* background-position: 0% 0%; */
+
+    /* background-position: top; */
+    /* background-position: bottom; */
+    /* background-position: right; */
+    /* background-position: left; */
+    /* background-position: center; */
+
+                        /*X    Y */
+    /* background-position: 50px 0px; */
+    /* background-position: 50px 60px; */
+    /* background-position: 50px 30%; */
+
+}
