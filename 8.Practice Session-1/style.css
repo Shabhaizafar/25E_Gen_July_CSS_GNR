@@ -1,0 +1,51 @@
+/* h1{
+    color: yellow;
+}
+.monst-1{
+    color: brown;
+}
+#block1{
+    color: lime;
+} */
+
+
+/* h1{
+    color: yellow;
+    background-color: lightcoral;
+} */
+
+
+
+/* color : 
+
+internal()  AND external 
+
+
+*/
+
+
+
+
+
+/* Class+id */
+/* #box1.block1{
+    color: aqua;
+} */
+.block1#box1{
+    color: red;
+}
+
+#box1{
+    color: yellow;
+}
+/* element+class+id */
+/* h1.block1#box1{
+    color: lightpink;
+} */
+
+/* h1#box1.block1{
+    color: lightpink;
+} */
+
+
+
