@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display (Basic)</title>
+    <style>
+        div{
+            background-color: aqua;
+
+            /* display: block; */
+            /* display: inline; */
+            /* display: inline-block; */
+
+            /* width: 200px; */
+            /* height: 200px; */
+            /* margin: 100px; */
+            /* margin: auto; */
+            /* padding: 30px; */
+        }
+        /* 
+            block : 
+                - default width : 100%
+                - default height : content-size
+                - width changeable
+                - height changeable
+                - margin : workable (all side)
+                - margin : auto (working)
+                - padding workable
+                - text position not fixed.
+        */
+        /* 
+            inline : 
+                - default width : content-size
+                - default height : content-size
+                - width  not changeable
+                - height not  changeable
+                - margin : workable (left+right side)    (top+bottom not working)
+                - margin : auto (not working)    
+                - padding workable
+                - text position fixed.
+        */
+        /* 
+            inline-block :
+                - default width : content-size
+                - default height : content-size
+                - width changeable
+                - height changeable
+                - margin : workable (all side)
+                - margin : auto (not working)    
+                - padding workable
+                - text position not fixed.
+        */
+
+
+        span{
+            background-color: red;
+            /* display: block; */
+        }
+
+        a{
+            background-color: red;
+            width: fit-content;
+            margin: 5px;
+            padding: 30px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- <b>zafar</b> -->
+    <!-- <div>
+        Royal
+    </div> -->
+    <!-- <span>wertyj</span> -->
+
+    <a href="">Google</a>
+    
+    <a href="">Facebook</a>
+</body>
+</html>
+
+<!-- 
+Block Element : 
+    - default width : 100%
+    - default height : content-size
+    - always start and end with new line
+    - some block element covered Extra Space (around)
+
+
+inline Element :
+    - default width : content-size
+    - default height : content-size
+    - always start and end with whitespace
+-->
