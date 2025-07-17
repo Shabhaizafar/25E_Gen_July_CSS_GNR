@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Position</title>
+    <style>
+        .tooltip-container{
+            background-color: aqua;
+            width: fit-content;
+            margin: 200px auto;
+            padding: 10px;
+            position: relative;
+        }
+        .tooltip{
+            background-color: black;
+            color: white;
+            width: min-content;
+            padding: 10px;
+            border-radius: 8px;
+            position: absolute;
+            top: 0px;
+            display: none;
+        }
+
+        .tooltip-container:hover .tooltip{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+  <div class="tooltip-container">
+    <p>Hover me</p>
+    <div class="tooltip">This is a tooltip!</div>
+  </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Position</title>
+    <style>
+        .tooltip-container{
+            /* background-color: aqua; */
+            width: fit-content;
+            margin: 200px auto;
+        }
+        .tooltip{
+            background-color: black;
+            color: white;
+            width: min-content;
+            padding: 10px;
+            border-radius: 8px;
+            filter: opacity(0);
+            position: relative;
+            top: -80px;
+        }
+        .tooltip:hover{
+            filter: opacity(1);
+        }
+    </style>
+</head>
+<body>
+  <div class="tooltip-container">
+    <p>Hover me</p>
+    <div class="tooltip">This is a tooltip!</div>
+  </div>
+</body>
+</html> -->
