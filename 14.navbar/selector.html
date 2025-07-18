@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h2{
+            color: red;
+        } */
+
+        /* div h2{
+            color: red;
+        } */
+
+        /* div section h2{
+            color: red;
+        } */
+
+
+        /* 
+        Child Selector
+        */
+        div>h2{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Outer</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit distinctio officia ex quae perferendis ea dolores necessitatibus quod, dolorem quaerat. Quo eius alias assumenda totam voluptatem ducimus dolores inventore accusantium?</p>
+    <div>
+        <h2>CSS</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit distinctio officia ex quae perferendis ea dolores necessitatibus quod, dolorem quaerat. Quo eius alias assumenda totam voluptatem ducimus dolores inventore accusantium?</p>
+        <section>
+            <h2>Inner Section</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad accusantium nihil sapiente iusto incidunt, assumenda consequuntur sed iste, enim adipisci quaerat exercitationem, in tenetur impedit aliquam magnam expedita vitae corrupti.</p>
+        </section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui delectus quisquam, voluptates enim possimus maxime ipsum ea id magnam iste ipsam adipisci natus facere quia voluptatibus aspernatur eaque amet perspiciatis.</p>
+        <h2>Last</h2>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            color: red;
+        }
+        h2{
+            color: red;
+        } */
+        /* Grouping Selector */
+        /* h1,h2{
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <h1>CSS</h1>
+    <h2>JS</h2>
+    <p></p>
+
+    
+</body>
+</html> -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: aqua;
+        }
+        h1{
+            color: red;
+        }
+        p{
+            color: blue;
+        }
+
+        /* Combinator Selector */
+        div p{
+            color: lime;
+        }
+        div section p{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Combinator Selector</h1>
+        <section>
+            <p>inner Section</p>
+        </section>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, neque!</p>
+    </div>
+    <p>outer</p>
+    <section>
+            <p>inner Section</p>
+        </section>
+</body>
+</html> -->
