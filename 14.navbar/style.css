@@ -1,0 +1,116 @@
+/* Universal Selector : reset  */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    background-color: lightsteelblue;
+    font-family: calibri;
+}
+header{
+    padding: 0px 10%;
+}
+.nav1{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 25px;
+}
+.nav2{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon1,.icon2,.icon3,.icon4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;   
+    border-radius: 50%;
+}
+
+.logo{
+    flex-basis: 230px;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-image: url("https://templatemo.com/templates/templatemo_406_flex/images/logo.png");
+    background-repeat: no-repeat;
+    font-size: 32px;
+    color: #ec523f;
+}
+.menu{
+    flex-grow: 1;
+    display: flex;
+    justify-content: right;
+    align-items: start;
+}
+ul{
+    display: flex;
+    gap: 30px;
+    padding-right: 30px;
+}
+ul li{
+    padding-top: 40px;
+    cursor: pointer;
+    border-top: 3px solid transparent;
+}
+.active{
+    border-top: 3px solid #ec523f;
+}
+ul li:hover{
+    color: #ec523f;
+}
+
+
+/*  */
+.home{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+.home-txt{
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin: auto;
+    position: absolute;
+    bottom: 15%;
+    
+}
+.home img{
+    filter: brightness(70%);
+}
+.home-txt a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: #ec523f;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.home-txt h2{
+    width: fit-content;
+    margin: auto;
+    font-size: 42px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+.home-txt p{
+    font-size: 20px;
+    padding: 15px 0px;
+}
+/* 
+ <article class="home-txt">
+                <h2>esponsive HTML CSS</h2>
+                <p>Download and use it for your site</p>
+                <a href="">Go to Portfolio</a>
+            </article>
+*/
