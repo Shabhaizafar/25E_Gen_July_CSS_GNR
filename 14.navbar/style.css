@@ -107,10 +107,100 @@ ul li:hover{
     font-size: 20px;
     padding: 15px 0px;
 }
+main{
+    position: absolute;
+    top: 650px;
+    width: 100%;
+}
+.service{
+    padding: 100px 7%;
+    background-color: white;
+}
+.service .about-blck{
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+.about-blck div{
+    width:20%;
+    text-align: center;
+    padding: 25px;
+    height: 250px;
+    color: white;
+}
+
+.ab-txt1{
+    background-color: lightcoral;
+}
+.ab-txt2{
+    background-color: lightgreen;
+}
+.ab-txt3{
+    background-color: lightslategrey;
+}
+.ab-txt4{
+    background-color: lightsalmon;
+}
+.about-blck div h4{
+    font-size: 24px;
+    border-bottom: 1px solid ;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 8px;
+    display: none;
+}
+.about-blck div p{
+    padding-top: 10px;
+    display: none;
+}
+.about-blck div:hover h4{
+    display: block;
+}
+.about-blck div:hover p{
+    display: block;
+}
+.about-cntnt{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about-cntnt h3{
+    width: fit-content;
+    margin: auto;
+    font-size: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+.about-cntnt p{
+    padding-top: 10px;
+    font-size: 20px;
+}
 /* 
- <article class="home-txt">
-                <h2>esponsive HTML CSS</h2>
-                <p>Download and use it for your site</p>
-                <a href="">Go to Portfolio</a>
+ <section class="service">
+            <article class="about-cntnt">
+                <h3>Our Services</h3>
+                <p>We design mobile-first websites for you</p>
             </article>
+            <article class="about-blck">
+                <div class="ab-txt1">
+                    <h4>HTML5 Coding</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
+                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
+                </div>
+                <div class="ab-txt2">
+                    <h4>HTML5 Coding</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
+                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
+                </div>
+                <div class="ab-txt3">
+                    <h4>HTML5 Coding</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
+                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
+                </div>
+                <div class="ab-txt4">
+                    <h4>HTML5 Coding</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
+                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
+                </div>
+            </article>
+        </section>
 */
