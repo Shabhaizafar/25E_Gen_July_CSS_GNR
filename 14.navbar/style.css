@@ -174,33 +174,75 @@ main{
     padding-top: 10px;
     font-size: 20px;
 }
-/* 
- <section class="service">
-            <article class="about-cntnt">
-                <h3>Our Services</h3>
-                <p>We design mobile-first websites for you</p>
-            </article>
-            <article class="about-blck">
-                <div class="ab-txt1">
-                    <h4>HTML5 Coding</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
-                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
-                </div>
-                <div class="ab-txt2">
-                    <h4>HTML5 Coding</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
-                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
-                </div>
-                <div class="ab-txt3">
-                    <h4>HTML5 Coding</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
-                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
-                </div>
-                <div class="ab-txt4">
-                    <h4>HTML5 Coding</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, assumenda, eveniet, consectetur,
-                        ex doloribus veniam asperiores incidunt mollitia placeat aniet.</p>
-                </div>
-            </article>
-        </section>
-*/
+
+
+
+/* 30/07 */
+.portfolio{     /*.service copy*/
+    padding: 100px 7%;
+    background-color: white;
+}
+
+.portfolio .portfolio-blck{     /*.service .service-blck copy*/
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+
+    /* changes */
+    flex-wrap: wrap;
+}
+.portfolio-blck aside{     /*.service div copy*/
+    width:20%;
+    text-align: center;
+    padding: 25px;
+    height: 250px;
+
+    /* changes */
+    background-image: url("https://templatemo.com/templates/templatemo_406_flex/images/slide2.jpg");
+    background-size: 100% 100%;
+}
+
+.portfolio-cntnt{     /*.service-cntnt copy*/
+    text-align: center;
+    margin-bottom: 50px;
+}
+.portfolio-cntnt h3{    /*.service-cntnt h3 copy*/
+    width: fit-content;
+    margin: auto;
+    font-size: 32px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid black;
+}
+.portfolio-cntnt p{     /*.service-cntnt p copy*/
+    padding-top: 10px;
+    font-size: 20px;
+}
+
+.portfolio-blck aside h4{     /*.service-blck div h4 copy*/
+    font-size: 24px;
+    border-bottom: 1px solid ;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 8px;
+    color: white;   /*changes*/
+    display: none;
+}
+.portfolio-blck aside p{  /*.service-blck div p copy*/
+    padding-top: 10px;
+    color: white;
+    display: none;
+}
+
+/* New */
+.portfolio-blck aside:hover{
+    background-image: url("");
+    background-color: #ec523f;
+}
+.portfolio-blck aside:hover h4{
+    display: block;
+}
+.portfolio-blck aside:hover p{
+    display: block;
+}
+
+
