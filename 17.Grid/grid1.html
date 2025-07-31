@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            background-color: slategray;
+            height: 630px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: .7fr 1fr 1fr;
+            grid-template-rows: .4fr 1fr 1fr .5fr;
+            gap: 20px;
+            grid-template-areas: 
+            "a a a"
+            "b c c"
+            "b d e"
+            "f f f";
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+        }
+        header{
+            background-color: blueviolet;
+            border: 5px solid black;
+            grid-area: a;
+            align-content: center;
+        }
+        aside{
+            background-color: blueviolet;
+            border: 5px solid black;
+            grid-area: b;
+        }
+        div{
+            background-color: blueviolet;
+            border: 5px solid black;
+        }
+        .b-1{
+            grid-area: c;
+        }
+        .b-2{
+            grid-area: d;
+        }
+        .b-3{
+            grid-area: e;
+        }   
+        footer{
+            background-color: blueviolet;
+            border: 5px solid black;
+            grid-area: f;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <div class="b-1">Content - 1</div>
+        <div class="b-2">Content - 2</div>
+        <div class="b-3">Content - 3</div>
+        <footer>Footer</footer>
+    </section>
+
+</body>
+</html>
