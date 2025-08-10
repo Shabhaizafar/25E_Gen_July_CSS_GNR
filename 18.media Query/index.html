@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        @media screen {
+            div {
+                background-color: teal;
+                font-family: calibri;
+            }
+
+            h1 {
+                color: darkorange;
+                font-size: 72px;
+                text-align: center;
+            }
+
+            p {
+                color: lightslategrey;
+                font-size: 24px;
+            }
+
+            img {
+                width: 50%;
+                display: block;
+                margin: auto;
+            }
+        }
+        /* @media screen and (max-width:1000px) {
+            div{
+                background-color: black;
+            }
+            h1{
+                color: white;
+            }
+        } */
+            
+        @media screen and (max-width:1000px) and (min-width : 500px) {
+            div{
+                background-color: black;
+            }    
+            h1{
+                color: white;
+            }
+        }
+
+        @media screen and (max-width:500px) {
+            div{
+                background-color: black;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 100px auto;
+                gap: 30px;
+                grid-template-areas: 
+                "a a"
+                "b c"
+                ;
+            }
+            h1{
+                grid-area: a;
+            }
+            img{
+                grid-area: b;
+            }
+            p{
+                grid-area: c;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <h1>Media Query</h1>
+        <img src="https://imgs.search.brave.com/-EjYwfUt3rJ6zAirUCEFdKDjaI1GH8z9HeWjcjYpv6s/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/OTYzOTUxNjAzOTkt/Y2E4ZjQ4ODRlN2Vm/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjAuMyZp/eGlkPU0zd3hNakEz/ZkRCOE1IeGpiMnhz/WldOMGFXOXVMWEJo/WjJWOE1URjhNVGM0/TVRRd09IeDhaVzU4/TUh4OGZIeDg"
+            alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam hic et vel quidem voluptate. Illum ut,
+            voluptatem deleniti quod esse tempore quia placeat perferendis dolorum, ratione vitae in est necessitatibus!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit quaerat ab mollitia. Repellat, doloribus.
+            Eveniet rem sequi eos placeat inventore, nulla maiores at ipsa, perspiciatis error, ab illo a neque!</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        div {
+            background-color: white;
+        }
+
+        section {
+            width: 100%;
+            height: 630px;
+            display: grid;
+            padding: 20px;
+            background-color: gray;
+            grid-template-columns: 1fr .3fr 1.2fr .7fr .7fr 1fr 1fr 1fr 1fr .7fr .7fr 1.2fr .3fr 1fr;
+            grid-template-rows: repeat(10, 1fr);
+            gap: 5px;
+            grid-template-areas: 
+            "a9 a9 a22 a22 a22 a1 a1 a14 a14 a3 a16 a23 a23 a23 "
+            "a24 a10 a10 a10 a10 a2 a2 a14 a14 a4 a4 a26 a26 a5"
+            "a24 a10 a10 a10 a10 a2 a2 a11 a11 a17 a17 a26 a26 a5"
+            "a25 a10 a10 a10 a10 a27 a28 a11 a11 a31 a31 a18 a18 a5"
+            "a25 a10 a10 a10 a10 a27 a28 a29 a29 a30 a30 a18 a18 a40"
+            "a25 a21 a21 a36 a36 a37 a37 a38 a39 a15 a15 a15 a15 a40"
+            "a6 a21 a21 a35 a35 a13 a13 a38 a39 a15 a15 a15 a15 a40"
+            "a6 a34 a34 a20 a20 a13 a13 a7 a7 a15 a15 a15 a15 a41"
+            "a6 a34 a34 a8 a33 a12 a12 a7 a7 a15 a15 a15 a15 a41"
+            "a32 a32 a32 a8 a33 a12 a12 a44 a19 a43 a43 a43 a42 a42";
+        }
+
+        .b1 {
+            grid-area: a1;
+        }
+
+        .b2 {
+            grid-area: a2;
+        }
+
+        .b3 {
+            grid-area: a3;
+        }
+
+        .b4 {
+            grid-area: a4;
+        }
+
+        .b5 {
+            grid-area: a5;
+        }
+
+        .b6 {
+            grid-area: a6;
+        }
+
+        .b7 {
+            grid-area: a7;
+        }
+
+        .b8 {
+            grid-area: a8;
+        }
+
+        .b9 {
+            grid-area: a9;
+        }
+
+        .b10 {
+            grid-area: a10;
+        }
+
+        .b11 {
+            grid-area: a11;
+        }
+
+        .b12 {
+            grid-area: a12;
+        }
+
+        .b13 {
+            grid-area: a13;
+        }
+
+        .b14 {
+            grid-area: a14;
+        }
+
+        .b15 {
+            grid-area: a15;
+        }
+
+        .b16 {
+            grid-area: a16;
+        }
+
+        .b17 {
+            grid-area: a17;
+        }
+
+        .b18 {
+            grid-area: a18;
+        }
+
+        .b19 {
+            grid-area: a19;
+        }
+
+        .b20 {
+            grid-area: a20;
+        }
+
+        .b21 {
+            grid-area: a21;
+        }
+
+        .b22 {
+            grid-area: a22;
+        }
+
+        .b23 {
+            grid-area: a23;
+        }
+
+        .b24 {
+            grid-area: a24;
+        }
+
+        .b25 {
+            grid-area: a25;
+        }
+
+        .b26 {
+            grid-area: a26;
+        }
+
+        .b27 {
+            grid-area: a27;
+        }
+
+        .b28 {
+            grid-area: a28;
+        }
+
+        .b29 {
+            grid-area: a29;
+        }
+
+        .b30 {
+            grid-area: a30;
+        }
+
+        .b31 {
+            grid-area: a31;
+        }
+
+        .b32 {
+            grid-area: a32;
+        }
+
+        .b33 {
+            grid-area: a33;
+        }
+
+        .b34 {
+            grid-area: a34;
+        }
+
+        .b35 {
+            grid-area: a35;
+        }
+
+        .b36 {
+            grid-area: a36;
+        }
+
+        .b37 {
+            grid-area: a37;
+        }
+
+        .b38 {
+            grid-area: a38;
+        }
+
+        .b39 {
+            grid-area: a39;
+        }
+
+        .b40 {
+            grid-area: a40;
+        }
+
+        .b41 {
+            grid-area: a41;
+        }
+
+        .b42 {
+            grid-area: a42;
+        }
+
+        .b43 {
+            grid-area: a43;
+        }
+
+        .b44 {
+            grid-area: a44;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .black {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="b1 yellow">Z1</div>
+        <div class="b2 yellow">Z2</div>
+        <div class="b3 yellow">Z3</div>
+        <div class="b4 yellow">Z4</div>
+        <div class="b5 yellow">Z5</div>
+        <div class="b6 yellow">Z6</div>
+        <div class="b7 yellow">Z7</div>
+        <div class="b8 yellow">Z8</div>
+        <div class="b9">Z9</div>
+        <div class="b10 red">Z10</div>
+        <div class="b11 red">Z11</div>
+        <div class="b12 red">Z12</div>
+        <div class="b13 blue">Z13</div>
+        <div class="b14 blue">Z14</div>
+        <div class="b15 blue">Z15</div>
+        <div class="b16 black">Z16</div>
+        <div class="b17 black">Z17</div>
+        <div class="b18 black">Z18</div>
+        <div class="b19  black">Z19</div>
+        <div class="b20  black">Z20</div>
+        <div class="b21  black">Z21</div>
+        <div class="b22">Z22</div>
+        <div class="b23">Z23</div>
+        <div class="b24">Z24</div>
+        <div class="b25">Z25</div>
+        <div class="b26">Z26</div>
+        <div class="b27">Z27</div>
+        <div class="b28">Z28</div>
+        <div class="b29">Z29</div>
+        <div class="b30">Z30</div>
+        <div class="b31">Z31</div>
+        <div class="b32">Z32</div>
+        <div class="b33">Z33</div>
+        <div class="b34">Z34</div>
+        <div class="b35">Z35</div>
+        <div class="b36">Z36</div>
+        <div class="b37">Z37</div>
+        <div class="b38">Z38</div>
+        <div class="b39">Z39</div>
+        <div class="b40">Z40</div>
+        <div class="b41">Z41</div>
+        <div class="b42">Z42</div>
+        <div class="b43">Z43</div>
+        <div class="b44">Z44</div>
+    </section>
+</body>
+
+</html>
