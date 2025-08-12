@@ -9,60 +9,35 @@
             background-color: aqua;
             height: 600px;
             display: grid;
-
-            gap: 20px;
-            /* grid-template-columns: auto; */
-            /* grid-template-columns: auto auto; */
-            /* grid-template-columns: 100px; */
-            /* grid-template-columns: 100px 300px; */
-            /* grid-template-columns: 100px 300px 400px; */
-
-            /* grid-template-columns: 1fr 1.5fr 1fr; */
-
-            /* 
-                1fr = 100%/total number of fr = 100%/1 = 100%
-
-                1fr = 100%/total number of fr = 100%/2 = 50%
-
-                1fr = 100%/total number of fr = 100%/3.5 = __
-            */
             grid-template-columns: 1fr 2fr 1fr 3fr;
-
-
-            /* grid-template-rows: 100px; */
-            /* grid-template-rows: 100px 200px; */
             grid-template-rows: 1fr 2fr 3fr 1fr;
-
-            grid-template-areas: 
-            "a a a b"
-            "d c c b"
-            "d c c b"
-            "d e f f";
-
+            gap: 20px;
         }
         .box1{
             background-color: darkblue;
-            grid-area: a;
+            grid-column: 1 / 4;
+            grid-row: 1;
         }
         .box2{
             background-color: darkgreen;
-            grid-area: b;
+            grid-row: 1 / 4;
         }
         .box3{
             background-color: darkmagenta;
-            grid-area: c;
+            grid-column:2 / 4;
+            grid-row: 2 / 4;
         }
         .box4{
             background-color: darkgoldenrod;
-            grid-area: d;
+            grid-column: 1;
+            grid-row: 2 / 5;
         }
         .box5{
             background-color: darkred;
-            grid-area: e;
         }
         .box6{
             background-color: darkslateblue;
-            grid-area: f;
+            grid-column: 3 / 5;
         }
     </style>
 </head>
