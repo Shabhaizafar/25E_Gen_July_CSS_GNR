@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .wrapper{
+            height: 130vh;
+            padding: 50px 8%;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 50px;
+        }
+        .main1{
+            font-family: calibri;
+            text-align: center;
+            display: grid;
+            gap: 20px;
+        }
+        .main1 h1{
+            font-size: 42px;
+        }
+        .main1 p{
+            font-size: 18px;
+        }
+        .main2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .aside1{
+            background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/dc540439000756b4b29c9cbd/Untitled3.jpg");
+            background-size: 100% 108%;
+        }
+        .aside2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+        .b1{
+            background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/40cb00cc51c854fd8425e424/c87c58322419a5789c87513afa350948.jpg");
+            background-size: 100% 100%;
+        }
+        .b2{
+            align-content: center;
+            font-family: calibri;
+        }
+        .b3{
+            background-image: url("https://images03.nicepage.com/c461c07a441a5d220e8feb1a/913dbbf303f2505ab2c5a975/ca89d3cfe6a03dcf5504bbf6a188eb5d.jpg");
+            grid-column: 2;
+            background-size: 100% 100%;
+        }
+        h2{
+            line-height: 60px;
+        }
+        p{
+            line-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <section class="wrapper">
+        <main class="main1">
+            <h1>Minimalist Interior Design</h1>
+            <p>Minimalism is about asking What is 'important' to you? And how you foster said important things.</p>
+        </main>
+        <main class="main2">
+            <aside class="aside1">
+                
+            </aside>
+            <aside class="aside2">
+                <article class="b1"></article>
+                <article class="b2">
+                        <h2>Trendy Design</h2>
+                        <p>Sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.</p>
+                </article>
+                <article class="b3"></article>
+            </aside>
+        </main>
+    </section>
+</body>
+</html>
