@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Using Hover Effect */
+        /* div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua; */
+            /* transition: all 1s; */
+            /* position: relative; */
+
+            /* margin-left: 0px; */
+            /* transform: translateX(0px); */
+            /* left: 0px; */
+        /* } */
+        /* div:hover{ */
+            /* margin-left: 200px; */
+            /* transform: translateX(200px); */
+            /* left: 200px; */
+        /* } */
+
+        /* Using Animation */
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+
+            animation-name: box;
+            animation-duration: 2s;
+            /* animation-iteration-count: 3; */
+            animation-iteration-count: infinite;
+
+            /* animation-direction: normal; */
+            /* animation-direction: reverse; */
+            /* animation-direction: alternate; */
+            /* animation-direction: alternate-reverse; */
+
+            
+        }
+        @keyframes box {
+            from{
+                /* transform: translateX(0px); */
+                margin-left: 0px;
+            }
+            to{
+                /* transform: translateX(400px); */
+                margin-left: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
