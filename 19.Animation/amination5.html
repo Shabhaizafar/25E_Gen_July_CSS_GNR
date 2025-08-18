@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .area{
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            animation-name: mode;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes mode {
+            from{
+                background-color: black;
+            }
+            to{
+                background-color: skyblue;
+            }
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            transform: rotate(45deg);
+            animation-name: m;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes m {
+            from{
+                background-color: rgb(20, 20, 20);
+            }to{
+                background-color: brown;
+            }
+        }
+        article{
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            bottom: -150px;
+        }
+        .sun{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: fixed;
+            left: 65%;
+            top: 110%;
+            animation-name: sun;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes sun {
+            from{
+                top: 110%;
+                background-color: orangered;
+            }   
+            to{
+                top: 20%;
+                background-color: yellow;
+            }
+        }
+        img{
+            position: fixed;
+            top: 45%;
+            left: -15%;
+            animation-name: cloud;
+            animation-duration: 20s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes cloud {
+            from{
+                left: -15%;
+                filter: brightness(10%);
+            }
+            to{
+                left: 100%;
+                filter: brightness(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="area">
+        <img src="https://images.vexels.com/media/users/3/155456/isolated/preview/5ab05e8fd837e091202abc042de804d3-weather-cloud-flat-icon.png" width="200px" alt="">
+        <main class="sun"></main>
+        <article>
+            <div class="m1"></div>
+            <div class="m2"></div>
+            <div class="m3"></div>
+        </article>
+    </section>
+</body>
+</html>
