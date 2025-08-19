@@ -4,7 +4,141 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>City Night Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      background: linear-gradient(to top, #0a0a0a, #1a1a40);
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* Stars */
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite alternate;
+    }
+
+    .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0.3s; }
+    .star:nth-child(2) { top: 15%; left: 50%; animation-delay: 1s; }
+    .star:nth-child(3) { top: 25%; left: 70%; animation-delay: 1.5s; }
+    .star:nth-child(4) { top: 35%; left: 30%; animation-delay: 2s; }
+    .star:nth-child(5) { top: 20%; left: 80%; animation-delay: 2.5s; }
+
+    @keyframes twinkle {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+
+    /* City buildings */
+    .city {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .building {
+      width: 100px;
+      background: #222;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .building::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 20px,
+        yellow 21px,
+        transparent 22px
+      );
+      opacity: 0.7;
+      animation: blink 2s infinite alternate;
+    }
+
+    @keyframes blink {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+
+    .building:nth-child(1) { height: 200px; }
+    .building:nth-child(2) { height: 300px; }
+    .building:nth-child(3) { height: 250px; }
+    .building:nth-child(4) { height: 350px; }
+    .building:nth-child(5) { height: 180px; }
+
+    /* Road */
+    .road {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 80px;
+      background: #333;
+      display: flex;
+      align-items: center;
+    }
+
+    .road::before {
+      content: "";
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: repeating-linear-gradient(
+        to right,
+        yellow 0px,
+        yellow 40px,
+        transparent 40px,
+        transparent 80px
+      );
+    }
+
+    /* Cars */
+    .car {
+      position: absolute;
+      bottom: 20px;
+      width: 60px;
+      height: 30px;
+      border-radius: 5px;
+      background: red;
+      animation: drive 8s linear infinite;
+    }
+
+    .car:nth-child(1) {
+      left: -80px;
+      background: red;
+      animation-delay: 0s;
+    }
+
+    .car:nth-child(2) {
+      left: -180px;
+      bottom: 50px;
+      background: blue;
+      animation-delay: 3s;
+    }
+
+    @keyframes drive {
+      from { left: -100px; }
+      to { left: 110%; }
+    }
+  </style>
 </head>
 <body>
   <!-- Stars -->
