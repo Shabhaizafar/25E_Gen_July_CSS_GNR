@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        div{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            /* 
+                linear : line     to 
+                radial  : circle  at
+                conic  : angle   from
+
+            */
+        }
+        .box1{
+            background-image: linear-gradient(red,yellow);
+        }
+        .box2{
+            background-image: radial-gradient(red,yellow);
+        }
+        .box3{
+            background-image: conic-gradient(red,yellow);
+        }
+        .box4{
+            background-image: conic-gradient(from 45deg,red,yellow);
+        }
+        .box5{
+            background-image: conic-gradient(red,yellow,red);
+        }
+        .box6{
+            background-image: conic-gradient(red 0deg,red 120deg,yellow 120deg,yellow);
+        }
+        .box7{
+            background-image: conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 180deg,red 180deg,red 270deg,yellow 270deg,yellow 360deg);
+        }
+        .box8{
+            background-image: repeating-conic-gradient(red 0deg,red 90deg,yellow 90deg,yellow 180deg);
+        }
+        .box9{
+            background-image: repeating-conic-gradient(white 0deg,white 90deg,black 90deg,black 180deg);
+            background-size: 50px 50px;
+            
+            /* 200 /4 = 50
+               200
+             */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1">Box1</div>
+    <div class="box2">Box2</div>
+    <div class="box3">Box3</div>
+    <div class="box4">Box4</div>
+    <div class="box5">Box5</div>
+    <div class="box6">Box6</div>
+    <div class="box7">Box7</div>
+    <div class="box8">Box8</div>
+    <div class="box9">Box9</div>
+    <div class="box10">Box10</div>
+
+</body>
+</html>

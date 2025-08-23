@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-image: conic-gradient(gray,gray,purple);
+            padding: 20px;
+            border-radius: 50%;
+
+            animation-name: loader;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes loader {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        main{
+            width: 160px;
+            height: 160px;
+            background-color: white;
+            border-radius: 50%;
+         }
+    </style>
+</head>
+<body>
+    <div>
+        <main>
+
+        </main>
+    </div>
+</body>
+</html>
