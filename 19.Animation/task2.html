@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Animations with % in CSS Keyframes</title>
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --card:#121829;
+      --ink:#e6edf3;
+      --soft:#9fb3c8;
+      --accent:#6ee7ff;
+      --accent-2:#a78bfa;
+      --accent-3:#34d399;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", "Noto Sans", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--ink);
+      min-height:100svh;
+      display:grid; place-items:center;
+      background-image: radial-gradient(1200px 600px at 100% -10%, #1d2540 0%, transparent 50%),
+                        radial-gradient(1000px 400px at -10% 100%, #1a263b 0%, transparent 50%);
+    }
+
+    .wrap{
+      width:min(1100px, 92vw);
+      display:grid; gap:24px;
+    }
+    header{display:flex; justify-content:space-between; align-items:end; gap:16px; flex-wrap:wrap}
+    h1{font-size:clamp(1.25rem, 2vw + 1rem, 2rem); margin:0}
+    p.lead{margin:0; color:var(--soft)}
+
+    .grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:24px}
+    .card{
+      background: linear-gradient(180deg, #121829, #0f1424);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius:18px; padding:18px; position:relative; overflow:hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .card h2{margin:0 0 10px; font-size:1rem; letter-spacing:.2px; color:var(--soft)}
+    .playground{height:220px; display:grid; place-items:center; position:relative}
+
+    /* 1) PATH + COLOR: uses 0%, 25%, 50%, 75%, 100% */
+    .path-stage{
+      width:180px; height:180px; border-radius:16px; border:1px dashed rgba(255,255,255,.12);
+      position:relative;
+    }
+    .runner{
+      --s: 36px;
+      width:var(--s); height:var(--s);
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--accent), var(--accent-2));
+      position:absolute; inset:auto auto 0 0;
+      animation: lap 4s ease-in-out infinite;
+      box-shadow:0 6px 20px rgba(110,231,255,.35);
+    }
+    @keyframes lap{
+      /* Using percentage checkpoints to move along a square path */
+      0%   { transform: translate(0, 0);              background:linear-gradient(135deg, var(--accent), var(--accent-2)); }
+      25%  { transform: translate(144px, 0) rotate(3deg); background:linear-gradient(135deg, var(--accent-2), var(--accent-3)); }
+      50%  { transform: translate(144px, 144px) rotate(0); background:linear-gradient(135deg, var(--accent-3), var(--accent)); }
+      75%  { transform: translate(0, 144px) rotate(-3deg); background:linear-gradient(135deg, var(--accent), var(--accent-2)); }
+      100% { transform: translate(0, 0);              }
+    }
+
+    /* 2) LOADER BAR: uses 0%, 40%, 60%, 100% */
+    .track{width:85%; height:14px; background:rgba(255,255,255,.08); border-radius:20px; overflow:hidden}
+    .bar{height:100%; width:20%; background:linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius:20px; transform-origin:left; animation: sweep 2.2s ease-in-out infinite;
+      box-shadow:0 0 18px rgba(167,139,250,.4);
+    }
+    @keyframes sweep{
+      0%   { transform: translateX(0) scaleX(0.2); opacity:.8 }
+      40%  { transform: translateX(40%) scaleX(0.8); opacity:1 }
+      60%  { transform: translateX(60%) scaleX(1); opacity:1 }
+      100% { transform: translateX(100%) scaleX(0.2); opacity:.8 }
+    }
+
+    /* 3) BOUNCING BALL: uses 0%, 10%, 40%, 60%, 80%, 100% */
+    .ground{position:absolute; inset:auto 12px 24px 12px; height:2px; background:rgba(255,255,255,.12);}
+    .ball{--d: 50px; width:var(--d); height:var(--d); border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, #fff 6%, #aef 18%, #6ee7ff 40%, #399 70%);
+      filter: drop-shadow(0 10px 18px rgba(110, 231, 255, .25));
+      animation: bounce 1.8s cubic-bezier(.26,.7,.31,1) infinite;
+    }
+    @keyframes bounce{
+      0%   { transform: translateY(-140px) scale(1,1) }
+      10%  { transform: translateY(0)      scale(1.15,.85) }
+      40%  { transform: translateY(-110px) scale(.95,1.05) }
+      60%  { transform: translateY(0)      scale(1.14,.86) }
+      80%  { transform: translateY(-50px)  scale(.98,1.02) }
+      100% { transform: translateY(0)      scale(1.12,.88) }
+    }
+
+    /* 4) GRADIENT BACKDROP ANIMATION with % checkpoints */
+    .animated-bg{
+      position:absolute; inset:-40% -10% -40% -10%; z-index:-1;
+      background: linear-gradient(120deg, rgba(110,231,255,.18), rgba(167,139,250,.12), rgba(52,211,153,.14));
+      filter: blur(60px);
+      animation: drift 12s ease-in-out infinite;
+    }
+    @keyframes drift{
+      0%   { transform: translateY(-4%) scale(1) rotate(0deg);   opacity:.55 }
+      50%  { transform: translateY(6%)  scale(1.08) rotate(10deg); opacity:.7 }
+      100% { transform: translateY(-4%) scale(1) rotate(0deg);   opacity:.55 }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .runner,.bar,.ball,.animated-bg{ animation: none; }
+    }
+
+    .tips{font-size:.9rem; color:var(--soft); line-height:1.4}
+    code{background:#0d1426; padding:.16rem .4rem; border-radius:8px; border:1px solid rgba(255,255,255,.06)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>CSS Animations using <code>%</code> in <code>@keyframes</code></h1>
+        <p class="lead">Four bite‑size demos that show how <strong>percentage checkpoints</strong> control motion, timing and style changes.</p>
+      </div>
+    </header>
+
+    <div class="animated-bg" aria-hidden="true"></div>
+
+    <section class="grid">
+      <!-- Demo 1 -->
+      <article class="card">
+        <h2>1) Path + Color checkpoints (0%/25%/50%/75%/100%)</h2>
+        <div class="playground">
+          <div class="path-stage">
+            <div class="runner" aria-label="animated square runs along the path"></div>
+          </div>
+        </div>
+        <p class="tips">Edit the <code>lap</code> keyframes to add more stops like <code>33%</code>, <code>66%</code> for custom routes.</p>
+      </article>
+
+      <!-- Demo 2 -->
+      <article class="card">
+        <h2>2) Loader bar (0%/40%/60%/100%)</h2>
+        <div class="playground">
+          <div class="track"><div class="bar"></div></div>
+        </div>
+        <p class="tips">Percentages define width/position milestones, creating acceleration effects without custom easing.</p>
+      </article>
+
+      <!-- Demo 3 -->
+      <article class="card">
+        <h2>3) Bouncing ball with squash & stretch</h2>
+        <div class="playground">
+          <div class="ground"></div>
+          <div class="ball"></div>
+        </div>
+        <p class="tips">Use extra checkpoints (e.g. <code>10%</code>, <code>60%</code>, <code>80%</code>) to shape arcs and impact.</p>
+      </article>
+
+      <!-- Demo 4 -->
+      <article class="card">
+        <h2>4) Ambient gradient drift</h2>
+        <div class="playground" style="overflow:visible">
+          <div class="animated-bg" style="inset:-10% -10% -10% -10%"></div>
+        </div>
+        <p class="tips">Even subtle background motion can be controlled by percentage checkpoints for smooth loops.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>How the % method works</h2>
+      <p class="tips">
+        In <code>@keyframes</code>, each percentage marks a <em>state</em> of your element at that moment in the animation timeline. The browser interpolates values between those
+        checkpoints. Common anchors are <code>0%</code> (start) and <code>100%</code> (end); adding middle values like <code>25%</code>, <code>40%</code>, <code>60%</code>, <code>75%</code>
+        lets you bend the timing and path.
+      </p>
+      <p class="tips">
+        Try tweaking <code>animation-duration</code>, <code>animation-timing-function</code>, and add/remove percentage steps to see the effect.
+      </p>
+    </section>
+  </div>
+</body>
+</html>

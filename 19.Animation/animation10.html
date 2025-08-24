@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        section{
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin: 100px auto;
+        }
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            position: absolute;
+            animation-name: loader;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes loader {
+            0%{
+                top: 0px;
+                left: 0px;
+                border-radius: 0%;
+                transform: scale(1);
+                background-color: yellow;
+            }25%{
+                top: 0px;
+                left: 70px;
+                transform: scale(.6);
+                border-radius: 50%;
+                background-color: red;
+            }50%{
+                top: 70px;
+                left: 70px;
+                border-radius: 0%;
+                transform: scale(1);
+                background-color: blue;
+            }75%{
+                top: 70px;
+                left: 0px;
+                transform: scale(.6);
+                border-radius: 50%;
+                background-color: lime;
+            }100%{
+                top: 0px;
+                left: 0px;
+                border-radius: 0%;
+                transform: scale(1);
+                background-color: yellow;
+            }
+        }
+        div:first-child{
+            animation-delay: 500ms;
+        }
+        div:nth-child(2){
+            animation-delay: 1000ms;
+        }
+        div:nth-child(3){
+            animation-delay: 1500ms;
+        }
+        div:last-child{
+            animation-delay: 2000ms;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+</body>
+</html>
