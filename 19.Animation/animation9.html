@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            animation-name: box;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        /* METHOD : 2 */
+        /* @keyframes box {
+            0%{
+                transform: translate(0px,0px);
+            }
+            25%{
+                transform: translate(400px,0px);
+            }
+            50%{
+                transform: translate(400px,400px);
+            }
+            75%{    
+                transform: translate(0px,400px);
+            }
+            100%{
+                transform: translate(0px,0px);
+            }
+        } */
+          @keyframes box {
+            0%{
+                transform: translate(0px,0px);
+                border-radius: 0%;
+            }
+            25%{
+                transform: translate(400px,0px);
+                border-radius: 25%;
+                background-color: blue;
+            }
+            50%{
+                transform: translate(400px,400px);
+                border-radius: 50%;
+            }
+            75%{    
+                transform: translate(0px,400px);
+                border-radius: 25%;
+            }
+            100%{
+                transform: translate(0px,0px);
+                border-radius: 0%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
