@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unique CSS Layout — Cascade / !important / calc() / Multicolumns / Grid & Flex</title>
+  <!--
+    CSS INSTRUCTIONS (instead of CSS code)
+
+    1. Use cascading styles to demonstrate specificity:
+       - Define a .center class with text-align: center;
+       - Override inside .hero .center to text-align: left;
+       - Force back with a .force-left using text-align: left !important;
+
+    2. Apply Grid layout for the page wrapper:
+       - grid-template-columns: 1fr minmax(0, 1100px) 1fr;
+       - Use calc() for column-gap: calc(24px + 1vw);
+
+    3. Make the header sticky with backdrop blur and a flexbox nav.
+
+    4. Hero Section:
+       - Grid with 2 columns (1.2fr and 1fr).
+       - h1 uses clamp() font-size and text-align.
+       - Card with border-radius and gradient background.
+
+    5. Article Section (Multicolumns):
+       - column-count: 2
+       - column-gap: calc(24px + 8px)
+       - column-rule: 1px dashed (slate color)
+       - text-align: justify
+       - Use column-span: all for headings.
+       - Add .tip box with break-inside: avoid.
+
+    6. Footer:
+       - Simple top border, muted color, padding.
+
+    7. Responsive:
+       - Below 800px: hero collapses to 1 column, article to 1 column (no rule).
+
+    8. Never use :root for CSS variables; instead define values directly in each selector.
+  -->
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="bar">
+        <div class="brand">Unique<span class="accent">Layout</span></div>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Docs</a>
+          <a href="#">Playground</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1 class="center">Magazine-style Multicolumn Layout</h1>
+        <p>Showcasing <strong>cascading</strong>, <code>!important</code>, <code>calc()</code>, <code>text-align</code>, and multicolumn properties: <code>column-rule</code>, <code>column-count</code>, <code>column-gap</code>, <code>column-span</code>. Grid handles the overall page; flex powers the nav.</p>
+      </div>
+      <div class="card">
+        <h3 class="center force-left">Why this is neat</h3>
+        <ul>
+          <li><code>calc()</code> drives gaps and paddings that scale with viewport.</li>
+          <li>True newspaper columns with dashed rules between them.</li>
+          <li>Headings span all columns using <code>column-span: all</code>.</li>
+          <li>The cascade example: <code>.center</code> → overridden by <code>.hero .center</code> → overridden back by <code>!important</code>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <main class="article">
+      <h2>Design Notes — Spanning All Columns</h2>
+      <p>
+        This section demonstrates a responsive, multi-column article. Resize the viewport to watch
+        the number of columns collapse gracefully at smaller widths. The space between columns is
+        set with <code>column-gap</code>, and each column is separated by a dashed <code>column-rule</code> that fades
+        into the dark background.
+      </p>
+      <p>
+        The global layout uses CSS Grid with centered content and fluid outer gutters computed via
+        <code>calc()</code>. Inside the header, the navigation is a flex container for simple horizontal
+        alignment and spacing.
+      </p>
+      <div class="tip">
+        <strong>Tip:</strong> Give key headings <code>column-span: all</code> so they read naturally across the full
+        page width and visually separate article sections without extra wrappers.
+      </div>
+      <p>
+        The cascade is subtle but powerful: base utilities define defaults; context-specific rules
+        (like <code>.hero .center</code>) adjust them; and, when absolutely necessary, <code>!important</code> can force a
+        style back in critical spots (use sparingly!).
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut elementum odio. Praesent
+        congue, massa id tristique tempus, nibh sapien tempus est, vitae euismod mi ante a dolor.
+        Curabitur convallis, ipsum in facilisis tristique, arcu tortor dictum augue, sit amet
+        eleifend magna justo et lorem. Cras tempor, arcu et faucibus pretium, ipsum dolor sagittis
+        metus, ut aliquet orci justo in justo. Praesent ullamcorper, mi sed fringilla mollis, lacus
+        lorem sodales lectus, id bibendum magna magna non arcu.
+      </p>
+      <h2>Section Break — Also Spanning</h2>
+      <p>
+        Suspendisse potenti. Integer malesuada, mi at porttitor gravida, nibh dui posuere neque,
+        vitae accumsan massa velit sit amet urna. Donec vel suscipit tortor. Nulla facilisi. Aenean
+        venenatis rutrum orci, non tincidunt dolor pellentesque quis. In iaculis felis erat, sed
+        vulputate libero hendrerit vitae.
+      </p>
+      <p>
+        Phasellus sagittis fermentum eros, at mattis neque egestas in. Pellentesque ut turpis id
+        libero congue laoreet. Sed sit amet accumsan nibh. Proin efficitur, lacus quis iaculis
+        volutpat, dui nisl malesuada urna, eu egestas nibh sem ac mauris.
+      </p>
+    </main>
+
+    <footer>
+      <div>Built with Grid + Flex + Multicolumns. All requested CSS features showcased.</div>
+    </footer>
+  </div>
+</body>
+</html>

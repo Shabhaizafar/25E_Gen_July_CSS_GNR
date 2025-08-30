@@ -4,7 +4,54 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>7 Wonders — Wikipedia Images</title>
-
+<style>
+  body{
+    margin:0;
+    padding:20px;
+    font-family: Arial, sans-serif;
+    background:#0b2438;
+    color:#f8fafc;
+  }
+  header{
+    text-align:center;
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    outline: 5px dashed #ff7a18;
+    outline-offset: 6px;
+    margin-bottom:20px;
+  }
+  header h1{ margin:0; }
+  
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap:16px;
+  }
+  figure.card{
+    margin:0;
+    background:#111827;
+    border-radius:12px;
+    padding:12px;
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, #ff7a18, #af002d, #6a11cb);
+    border-image-slice: 1;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:8px;
+  }
+  figcaption{
+    text-align:center;
+  }
+  .title{ font-weight:bold; font-size:1.1rem; }
+  .subtitle{ font-size:0.9rem; opacity:0.8; }
+</style>
 </head>
 <body>
 
