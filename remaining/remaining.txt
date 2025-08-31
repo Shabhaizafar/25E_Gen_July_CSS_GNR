@@ -1,5 +1,5 @@
 font property 
-
+WebFont 
 icons
 -- errors
 max-width 
@@ -12,11 +12,7 @@ float
 combinator 
 counters 
 dropdwon 
-opacity 
-
 Performance + Accessibility 
-
-
 Units
 form 
 color-keywords
@@ -24,19 +20,10 @@ color-keywords
 object-fit 
 object-position 
 image-masking
-
-
-hover >>>> ToolTip 
-
-
-
 image-styling
 image-centering
 image-filter
 image-shape
-
-
-WebFont 
 
 
 buttons
