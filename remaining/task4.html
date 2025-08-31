@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Properties Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nabla&display=swap" rel="stylesheet">
+
+  <!-- 
+  ========== CSS INSTRUCTIONS ========== 
+  1. Apply a gradient background to the body and use a clean sans-serif font.
+  2. Make the header sticky with a dark background, bold Google font, and shadow.
+  3. Create a navigation bar with hover effects and smooth scroll behavior.
+  4. Use section cards with padding, rounded corners, and hover lift effect.
+  5. Pseudo-elements:
+     - ::first-line with aqua + gray background
+     - ::first-letter with blue + black bg and bigger font
+     - ::before with lime label
+     - ::after with lime text
+  6. Pseudo-classes:
+     - div:hover changes background
+     - first-child, nth-child(3), last-child style list items
+     - link, visited, hover, active link states
+     - input:focus with outline highlight
+  7. Opacity demo: create a red circle with opacity set to 0.6
+  8. Fonts:
+     - h1 with Calibri (inbuilt)
+     - h2 with fallback font-family
+     - h3 and p with Google Fonts (Bungee Spice, Nabla)
+     - div with custom @font-face font
+  9. attr(): before content of list items showing attr(data-text) + arrow
+  10. Footer styled with dark background and small gray text.
+  ======================================
+  -->
+</head>
+<body>
+
+  <header>
+    <h1>CSS Properties Showcase</h1>
+    <nav>
+      <a href="#pseudo-elements">Pseudo-elements</a>
+      <a href="#pseudo-classes">Pseudo-classes</a>
+      <a href="#opacity">Opacity</a>
+      <a href="#fonts">Fonts</a>
+      <a href="#attr">attr()</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="pseudo-elements" class="pseudo-elements">
+      <h2>Pseudo-elements</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos cumque ex nihil, eius neque tenetur tempore.</p>
+    </section>
+
+    <section id="pseudo-classes" class="pseudo-classes">
+      <h2>Pseudo-classes</h2>
+      <input type="text" placeholder="Focus on me">
+      <br><br>
+      <a href="https://www.google.com/">Google</a> |
+      <a href="https://www.facebook.com/">Facebook</a> |
+      <a href="#">Link</a>
+      <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li>List3</li>
+        <li>List4</li>
+        <li>List5</li>
+      </ul>
+      <div></div>
+    </section>
+
+    <section id="opacity" class="opacity-demo">
+      <h2>Opacity</h2>
+      <div></div>
+    </section>
+
+    <section id="fonts" class="fonts">
+      <h2>Fonts</h2>
+      <h1>Inbuilt Font (Calibri)</h1>
+      <h2>Fallback Fonts</h2>
+      <h3>Google Font</h3>
+      <p>Another Google Font</p>
+      <div>@font-face Custom Font</div>
+    </section>
+
+    <section id="attr" class="attr-demo">
+      <h2>attr() Function</h2>
+      <ul>
+        <li data-text="List1">List1</li>
+        <li data-text="List2">List2</li>
+        <li data-text="List3">List3</li>
+        <li data-text="List4">List4</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 CSS Properties Showcase | Designed with ♥
+  </footer>
+
+</body>
+</html>
