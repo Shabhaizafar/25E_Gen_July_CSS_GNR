@@ -12,17 +12,13 @@ float
 combinator 
 counters 
 dropdwon 
-Spudo-class + element 
-
-
-form 
-attr 
-Units
 opacity 
 
 Performance + Accessibility 
 
 
+Units
+form 
 color-keywords
 3D-Transform 
 object-fit 

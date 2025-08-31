@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* element */
+        p{
+            color: red;
+        }
+
+        p::first-line{
+           color: aqua; 
+           background-color: darkgray;
+        }
+
+        p::first-letter{
+            color: blue;
+            background-color: black;
+            font-size: 32px;
+        }
+
+        p::before{
+            content: 'Parapgraph : 1 => ';
+            color: lime;
+            background-color: black;
+        }
+
+        p::after{
+            content: 'Royal';
+            color: lime;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos cumque ex nihil, eius neque tenetur tempore, explicabo officiis enim libero! Voluptatum nobis nam obcaecati eligendi earum sint, officiis molestias.</p>  
+</body>
+</html>
+
+<!-- 
+::
+-->

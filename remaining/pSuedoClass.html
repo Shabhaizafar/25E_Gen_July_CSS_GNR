@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+        a{
+            font-size: 32px;
+        }
+
+        /* pSuedo Class Selector */
+
+        /* Hover Effect */
+        div:hover{
+            background-color: red;
+        }
+        li:first-child{
+            color: red;
+        }
+        li:nth-child(3){
+            color: blueviolet;
+        }
+        li:last-child{
+            color: blue;
+        }
+
+        /* not visited link */
+        a:link{
+            color: brown;
+        }
+        /* visited */
+        a:visited{
+            color: aqua;
+        }
+        /* hover */
+        a:hover{
+            color: red;
+        }
+        /* on click / on active */
+        a:active{
+            color: yellow;   
+        }
+
+        a:visited:hover{
+            color: crimson;
+        }
+
+        input:focus{
+
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <br>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="#">Link</a>
+    <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li>List3</li>
+        <li>List4</li>
+        <li>List5</li>
+    </ul>
+    <div></div>
+</body>
+</html>
+<!-- 
+:
+ -->

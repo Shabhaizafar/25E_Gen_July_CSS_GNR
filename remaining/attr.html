@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        li::before{
+            content: attr(data-text)' : ';
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li data-text="List1">List1</li>
+        <li data-text="List2">List2</li>
+        <li data-text="List3">List3</li>
+        <li data-text="List4">List4</li>
+        <li data-text="List5">List5</li>
+        <li data-text="List6">List6</li>
+        <li data-text="List7">List7</li>
+        <li data-text="List8">List8</li>
+        <li data-text="List9">List9</li>
+        <li data-text="List10">List10</li>
+    </ul>
+</body>
+</html>
