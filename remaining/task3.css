@@ -1,0 +1,106 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+/* ----------------- */
+.page{
+    background-color:#141c30;
+    color: white;
+    font-family: verdana;
+    padding: 0% 8%;
+}
+p{
+    text-align: justify;
+    font-size: 14px;
+    line-height: 25px;
+}
+a{
+    text-decoration: none;
+    color: rgb(197, 195, 195);
+}
+/* Header */
+header{
+    background-color: #111827;
+}
+.bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+nav{
+    display: flex;
+    gap: 40px;
+}
+
+.brand{
+    font-weight: bolder; /* New */
+}
+.accent{
+    color: aqua;
+}
+
+/* Hero  */
+.hero{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+}
+.card{
+    background-color: #111827;
+    padding: 35px 20px;
+    border-radius: 16px;
+    border: 1px solid #353944;
+}
+h3{
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+ul{
+    padding-left: 35px;
+}
+li{
+    line-height: 30px;
+    font-size: 14px;
+}
+h1.center{
+    font-size: 36px;
+    line-height: 65px;
+}
+.hero p{
+    padding-top: 10px;
+}
+.tip{
+    background-color: #111827;
+    font-size: 14px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #353944;
+}
+/* Article  */
+.article{
+    padding: 30px;
+    padding-bottom: 80px;
+    column-count: 2;
+    column-rule: 1px dashed #696f80;
+    column-gap: 30px;
+}
+.article h2{
+    color: aqua;
+    column-span: all;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px 0px;
+}
+.article p{
+    padding-bottom: 15px;
+}
+/* Footer */
+footer{
+    padding: 30px;
+    color: #696f80;
+    border-top: 1px solid #353944;
+}
+

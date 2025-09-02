@@ -2,14 +2,9 @@ font property
 WebFont 
 icons
 -- errors
-max-width 
-link 
-list 
-tables
+max-width  
 overflow
 image Sprites
-float 
-combinator 
 counters 
 dropdwon 
 Performance + Accessibility 
@@ -24,13 +19,7 @@ image-styling
 image-centering
 image-filter
 image-shape
-
-
 buttons
 paggination
- 
-variables 
 @property 
-
-
 Then layout + UI 
