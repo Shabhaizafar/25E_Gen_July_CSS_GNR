@@ -1,12 +1,8 @@
-font property 
-WebFont 
-icons
 -- errors
-max-width  
+dropdwon  
 overflow
 image Sprites
-counters 
-dropdwon 
+counters  
 Performance + Accessibility 
 Units
 form 
