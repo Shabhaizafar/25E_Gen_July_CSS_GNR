@@ -8,8 +8,6 @@ Units
 form 
 color-keywords
 3D-Transform 
-object-fit 
-object-position 
 image-masking
 image-styling
 image-centering
