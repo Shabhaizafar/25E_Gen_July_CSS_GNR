@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navbar</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: black;
+            font-family: calibri;
+        }
+
+        .main-menu {
+            margin: 100px auto;
+            width: 80%;
+            display: flex;
+            font-size: 24px;
+            gap: 2px;
+        }
+
+        .main-menu>li {
+            background-color: gainsboro;
+            display: flex;
+            transition: all .5s;
+            position: relative;
+        }
+
+        .main-menu>li>a {
+            padding: 10px 20px;
+            color: rgb(58, 57, 57);
+            display: flex;
+            align-items: center;
+        }
+
+        .main-menu>li:hover {
+            background-color: rgb(173, 172, 172);
+        }
+        .main-menu>li:hover .sub-menu{
+            display: block;
+        }
+
+        .sub-menu {
+            display: none;
+            position: absolute;
+            width: 200px;
+            top: 100%;
+            left: 0%;
+            background-color: rgb(102, 100, 100);
+            font-size: 18px;
+        }
+
+        .sub-menu>li {
+            display: flex;
+            transition: all .3s;
+            position: relative;
+        }
+
+        .sub-menu>li:hover {
+            background-color: rgb(173, 172, 172);
+        }
+
+        .sub-menu>li>a {
+            color: rgb(58, 57, 57);
+            padding: 5px 15px;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .sub-menu>li:hover .sub-menu-2{
+            display: block;
+        }
+
+        .sub-menu-2{
+            display: none;
+            position: absolute;
+            background-color: rgb(173, 172, 172);
+            left: 100%;
+            top: 10%;
+        }
+        .sub-menu-2>li{
+            display: flex;
+        }
+        .sub-menu-2>li>a{
+            color: rgb(58, 57, 57);
+            padding: 5px 15px;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul class="main-menu">
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li>
+            <a href="#">About Us
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#">1 Child
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">2 Child
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">3 Child
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Portfolio
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                </span>
+            </a>
+            <ul class="sub-menu">
+                <li>
+                    <a href="#">No Children</a>
+                </li>
+                <li>
+                    <a href="#">1 Children
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">2 Children
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">3 Children
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                    <ul class="sub-menu-2">
+                        <li>
+                            <a href="#">Child#1</a>
+                        </li>
+                        <li>
+                            <a href="#">Child#2</a>
+                        </li>
+                        <li>
+                            <a href="#">Child#3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">Events</a>
+        </li>
+        <li>
+            <a href="#">Blog</a>
+        </li>
+        <li>
+            <a href="#">Careers</a>
+        </li>
+        <li>
+            <a href="#">Contact Us</a>
+        </li>
+    </ul>
+</body>
+
+</html>

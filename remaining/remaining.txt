@@ -1,19 +1,12 @@
--- errors
-dropdwon  
-overflow
+-- errors 
 image Sprites
-counters  
 Performance + Accessibility 
 Units
 form 
 color-keywords
 3D-Transform 
-image-masking
 image-styling
 image-centering
-image-filter
 image-shape
-buttons
-paggination
 @property 
 Then layout + UI 
