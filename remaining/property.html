@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* Create */
+        @property --my-color {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: aqua;
+            
+        }
+        .box1 div{
+              position: relative;
+              left: 200px;
+              
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-family: calibri;
+        }
+        .box1{
+            border: 1px solid;
+            --my-color : red;
+        }
+        div{
+            width: 150px;
+            height: 150px;
+            border: 1px solid;
+            margin: 5px;
+            background-color: var(--my-color);
+        }
+        .box2{
+        }
+        .box3{
+               --my-color : blue;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div class="box1">box1
+            <div>
+                css
+            </div>
+            </div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    
+    
+
+</body>
+</html>

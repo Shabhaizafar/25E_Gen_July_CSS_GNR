@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            font-family: calibri;
+        }
+        section{
+            display: flex;
+            padding: 50px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .img1{
+            border: 1px solid red;
+            border-radius: 20px;
+            /* border-radius: 50%; */
+            /* border-radius: 0px; */
+
+        }
+        .img2{
+            /* clip-path: circle(); */
+            /* clip-path: circle(50px); */
+            clip-path: circle(50%);
+            /* clip-path: circle(0px); */
+            /* clip-path: circle(50px); */
+            /* clip-path: ellipse(50px 10px); */
+        }
+        .img3{
+            clip-path: circle(50% at bottom);
+        }
+        .img4{
+            clip-path: circle(50% at right top);
+        }
+        .img5{
+
+        }
+        .child{
+            background-color: teal;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 0%;
+            transition: all 1s;
+            /* opacity: 0; */
+        }
+        .txt{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 1s;
+        }
+
+        .parent:hover .child{
+            /* opacity: 1;   */
+            transition: all 1s;
+            height: 100%;
+        }
+        .parent:hover .child .txt{
+            opacity: 1;
+        }
+        .parent2{
+            overflow: hidden;
+        }
+        .child2{
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        aside{
+            background-color: coral;
+            transition: all 1s;
+        }
+        .parent2:hover .child2 aside:first-child{
+            transform: translatex(-100%);
+        }
+        .parent2:hover .child2 aside:last-child{
+            transform: translatex(100%);
+        }
+
+
+        .parent3{
+
+        }
+        .child3{
+            background-color: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 1s all;
+        }
+        .parent3:hover .child3{
+            opacity: 1;
+        }
+        .txt3{
+            background-color:#4CAF50;
+            color: white;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img1">
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img2">
+        </div>
+
+        <div>
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img3">
+        </div>
+        <div>
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img4">
+        </div>
+        <div class="parent">
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img5">
+            <main class="child">
+                <p class="txt">ROYAL</p>
+            </main>
+        </div>
+        <div class="parent2">
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img5">
+            <article class="child2">
+                <aside></aside>
+                <aside></aside>
+            </article>
+        </div>
+        <div class="parent3">
+            <img src="https://m.media-amazon.com/images/I/41jLBhDISxL._UF1000,1000_QL80_.jpg" alt="" class="img5">
+            <main class="child3">
+                <p class="txt3">ROYAL</p>
+            </main>
+        </div>
+    </section>
+</body>
+</html>

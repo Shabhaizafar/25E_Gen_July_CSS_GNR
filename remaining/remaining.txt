@@ -5,8 +5,6 @@ Units
 form 
 color-keywords
 3D-Transform 
-image-styling
 image-centering
-image-shape
-@property 
+
 Then layout + UI 
