@@ -1,10 +1,5 @@
--- errors 
-image Sprites
 Performance + Accessibility 
 Units
 form 
-color-keywords
 3D-Transform 
-image-centering
-
 Then layout + UI 

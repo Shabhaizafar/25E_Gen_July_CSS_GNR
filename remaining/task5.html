@@ -4,7 +4,702 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>30 Image Hover Effects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            font-family: Calibri, sans-serif;
+        }
+        section {
+            display: flex;
+            padding: 50px;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
+        /* Effect 1: Fade-in Overlay */
+        .effect1 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 99, 71, 0.7);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect1:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 2: Slide-in Overlay from Bottom */
+        .effect2 .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 128, 128, 0.8);
+            transition: bottom 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect2:hover .overlay {
+            bottom: 0;
+        }
+
+        /* Effect 3: Zoom-in Image */
+        .effect3 img {
+            transition: transform 0.5s;
+        }
+        .effect3:hover img {
+            transform: scale(1.2);
+        }
+        .effect3 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect3:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 4: Rotate Image */
+        .effect4 img {
+            transition: transform 0.5s;
+        }
+        .effect4:hover img {
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        /* Effect 5: Circle Clip-path Reveal */
+        .effect5 img {
+            clip-path: circle(0% at center);
+            transition: clip-path 0.5s;
+        }
+        .effect5:hover img {
+            clip-path: circle(50% at center);
+        }
+        .effect5 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(75, 0, 130, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Effect 6: Slide-in Overlay from Left */
+        .effect6 .overlay {
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 215, 0, 0.8);
+            transition: left 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect6:hover .overlay {
+            left: 0;
+        }
+
+        /* Effect 7: Border Expand */
+        .effect7 {
+            border: 5px solid transparent;
+            transition: border 0.5s;
+        }
+        .effect7:hover {
+            border: 5px solid #ff4500;
+        }
+        .effect7 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect7:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 8: Tilt Image */
+        .effect8 img {
+            transition: transform 0.5s;
+        }
+        .effect8:hover img {
+            transform: rotateX(20deg);
+        }
+
+        /* Effect 9: Overlay with Text Slide-up */
+        .effect9 .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: rgba(0, 191, 255, 0.8);
+            transition: bottom 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect9:hover .overlay {
+            bottom: 0;
+        }
+
+        /* Effect 10: Grayscale to Color */
+        .effect10 img {
+            filter: grayscale(100%);
+            transition: filter 0.5s;
+        }
+        .effect10:hover img {
+            filter: grayscale(0%);
+        }
+        .effect10 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect10:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 11: Diagonal Overlay Slide */
+        .effect11 .overlay {
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(138, 43, 226, 0.7);
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect11:hover .overlay {
+            top: 0;
+            left: 0;
+        }
+
+        /* Effect 12: Image Blur */
+        .effect12 img {
+            transition: filter 0.5s;
+        }
+        .effect12:hover img {
+            filter: blur(5px);
+        }
+        .effect12 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect12:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 13: Expand Circle Overlay */
+        .effect13 .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: rgba(255, 20, 147, 0.8);
+            border-radius: 50%;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+        }
+        .effect13:hover .overlay {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Effect 14: Vertical Split */
+        .effect14 .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        .effect14 .overlay div {
+            background-color: rgba(60, 179, 113, 0.8);
+            transition: transform 0.5s;
+        }
+        .effect14:hover .overlay div:first-child {
+            transform: translateY(-100%);
+        }
+        .effect14:hover .overlay div:last-child {
+            transform: translateY(100%);
+        }
+
+        /* Effect 15: Pulse Border */
+        .effect15 {
+            border: 5px solid transparent;
+            transition: border-color 0.5s;
+        }
+        .effect15:hover {
+            border-color: #00ff00;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+        }
+        .effect15 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect15:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 16: Horizontal Slide Overlay */
+        .effect16 .overlay {
+            position: absolute;
+            right: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 165, 0, 0.8);
+            transition: right 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect16:hover .overlay {
+            right: 0;
+        }
+
+        /* Effect 17: Image Brightness Increase */
+        .effect17 img {
+            transition: filter 0.5s;
+        }
+        .effect17:hover img {
+            filter: brightness(150%);
+        }
+        .effect17 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect17:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 18: Rotate and Zoom Overlay */
+        .effect18 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 0, 128, 0.7);
+            transform: rotate(45deg) scale(0);
+            transition: transform 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect18:hover .overlay {
+            transform: rotate(0deg) scale(1);
+        }
+
+        /* Effect 19: Skew Image */
+        .effect19 img {
+            transition: transform 0.5s;
+        }
+        .effect19:hover img {
+            transform: skew(10deg, 10deg);
+        }
+        .effect19 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect19:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 20: Ellipse Clip-path Reveal */
+        .effect20 img {
+            clip-path: ellipse(0% 0% at center);
+            transition: clip-path 0.5s;
+        }
+        .effect20:hover img {
+            clip-path: ellipse(50% 50% at center);
+        }
+        .effect20 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 69, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Effect 21: Horizontal Split */
+        .effect21 .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .effect21 .overlay div {
+            background-color: rgba(30, 144, 255, 0.8);
+            transition: transform 0.5s;
+        }
+        .effect21:hover .overlay div:first-child {
+            transform: translateX(-100%);
+        }
+        .effect21:hover .overlay div:last-child {
+            transform: translateX(100%);
+        }
+
+        /* Effect 22: Fade-out Image */
+        .effect22 img {
+            transition: opacity 0.5s;
+        }
+        .effect22:hover img {
+            opacity: 0.3;
+        }
+        .effect22 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect22:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 23: Border Radius Change */
+        .effect23 {
+            border-radius: 0;
+            transition: border-radius 0.5s;
+        }
+        .effect23:hover {
+            border-radius: 50%;
+        }
+        .effect23 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect23:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 24: Image Contrast Increase */
+        .effect24 img {
+            transition: filter 0.5s;
+        }
+        .effect24:hover img {
+            filter: contrast(200%);
+        }
+        .effect24 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect24:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 25: Slide-in Overlay from Top */
+        .effect25 .overlay {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 105, 180, 0.8);
+            transition: top 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect25:hover .overlay {
+            top: 0;
+        }
+
+        /* Effect 26: Image Sepia */
+        .effect26 img {
+            transition: filter 0.5s;
+        }
+        .effect26:hover img {
+            filter: sepia(100%);
+        }
+        .effect26 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect26:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 27: Diagonal Clip-path */
+        .effect27 img {
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            transition: clip-path 0.5s;
+        }
+        .effect27:hover img {
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+        .effect27 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 128, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+
+        /* Effect 28: Scale Down Image */
+        .effect28 img {
+            transition: transform 0.5s;
+        }
+        .effect28:hover img {
+            transform: scale(0.8);
+        }
+        .effect28 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect28:hover .overlay {
+            opacity: 1;
+        }
+
+        /* Effect 29: Four Corner Overlay */
+        .effect29 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+        }
+        .effect29 .overlay div {
+            background-color: rgba(255, 99, 71, 0.8);
+            transition: transform 0.5s;
+        }
+        .effect29:hover .overlay div:nth-child(1) {
+            transform: translate(-100%, -100%);
+        }
+        .effect29:hover .overlay div:nth-child(2) {
+            transform: translate(100%, -100%);
+        }
+        .effect29:hover .overlay div:nth-child(3) {
+            transform: translate(-100%, 100%);
+        }
+        .effect29:hover .overlay div:nth-child(4) {
+            transform: translate(100%, 100%);
+        }
+
+        /* Effect 30: Spin Overlay */
+        .effect30 .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 255, 255, 0.8);
+            transform: rotate(360deg) scale(0);
+            transition: transform 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+        }
+        .effect30:hover .overlay {
+            transform: rotate(0deg) scale(1);
+        }
+    </style>
 </head>
 <body>
     <section>

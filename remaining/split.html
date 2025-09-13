@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: blue;
+            font-family: calibri;
+        }
+        ul{
+            /* background-color: white; */
+            list-style-type: none;
+            width: 1000px;
+            height: calc(100vh - 200px);
+            margin: 100px auto;
+            display: flex;
+        }
+        /* 
+        
+        100% : 
+            5
+        
+        */
+        li{
+            flex-grow: 1;
+            background-image: url("https://imgs.search.brave.com/9cgEGRQztu5wvTCv5fxc_1mfcYPMj6Toon9649hjXRo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzA5LzE0/LzE4LzA5MTQxODkz/ZmFlYzIwMjkzZTU2/ZmZlNjc0MWEzZTI1/LmpwZw");
+            
+            background-size: 500% 100%;
+            background-repeat: no-repeat;
+            /* background-size: contain; */
+            transition: all 1s;
+        }
+        li:nth-child(1){
+            background-position: 0% 0%;
+        }
+        li:nth-child(2){
+            background-position: 25% 0%;
+        }
+        li:nth-child(3){
+            background-position: 50% 0%;
+        }
+        li:nth-child(4){
+            background-position: 75% 0%;
+        }
+        li:nth-child(5){
+            background-position: 100% 0%;
+        }   
+        
+        ul:hover li:nth-child(2n){
+            /* background-color: aqua; */
+            transform: skewY(30deg);
+            box-shadow: inset 0px -5px 5px gray;
+        }
+        ul:hover li:nth-child(2n+1){
+            /* background-color: coral; */
+            transform: skewY(-30deg);
+
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <img src="https://imgs.search.brave.com/9cgEGRQztu5wvTCv5fxc_1mfcYPMj6Toon9649hjXRo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzA5LzE0/LzE4LzA5MTQxODkz/ZmFlYzIwMjkzZTU2/ZmZlNjc0MWEzZTI1/LmpwZw" alt=""> -->
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
