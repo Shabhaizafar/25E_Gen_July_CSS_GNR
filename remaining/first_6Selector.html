@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: linen;
+            font-family: monospace;
+        }
+
+        /* Universal Selector */
+        /* reset property (Tag) */
+        *{
+            /*code*/
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style-type: none;
+
+            /* Not Valid */
+            /* color: red; */
+        }
+
+        /* Root Element */
+        /* Variable Declare,default intial values */
+        :root{
+            color: red;
+        }
+
+        /* Element Selector */
+        h2{
+            background-color: aqua;
+            width: 50%;
+            /* padding: 0px 20px; */
+        }
+
+        /* Class Selector */
+        .class1{
+            background-color: red;
+        }
+
+
+        /* Id Selector */
+        #id1{
+            font-size: xx-large;
+        }
+
+        /* Cominator Selector */
+        main aside{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /* group  Selector */
+        main aside, section , header , .class1{
+            color : blue;
+            background-color: coral;
+        }
+
+    </style>
+</head>
+<body>
+    ALL Selectors
+    <h2>Heading Nothing ELEMENT</h2>
+    <h2 class="class1">Heading Nothing CLASS</h2>
+    <h2 id="id1">Heading Nothing ID</h2>
+    <ul>
+        <li>List1</li>
+        <li>List2</li>
+        <li>List3</li>
+        <li>List4</li>
+        <li>List5</li>
+    </ul>
+    <section>GROUP SELECTOR</section>
+    <main>GROUP SELECTOR
+        <aside>CSS</aside>
+    </main>
+    <header>GROUP SELECTOR</header>
+</body>
+</html>
