@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        section{
+            background-color: gainsboro;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parent{
+            width: 200px;
+            height: 200px;
+            border: 2px solid gray;
+            /* perspective: 100px; */
+            /* perspective: 100%; */
+            perspective: 100px;
+        }
+        .cube{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            transform-style: preserve-3d;
+            transform: translateZ(-100px) rotateX(0deg);
+            position: relative;
+
+            animation-name: cube;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes cube {           
+            from{
+                /* transform: rotate(0deg) translateZ(-100px) translateY(0px); */
+                /* transform: translateZ(-100px) rotateY(0deg); */
+            }
+
+            to{
+                /* transform: rotate(180deg) translateZ(-200px) translateY(100px); */
+                /* transform: translateZ(-100px) rotateY(180deg); */
+            }
+        }
+        .cube>div{
+            color: white;
+            font-size: 24px;
+            font-family:verdana;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        .box1{
+            background-color: rgba(255, 0, 0, 0.5);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .box2{
+            background-color: rgba(0, 0, 255, 0.5);
+            transform: translateZ(100px);
+        }
+        .box3{
+            background-color: rgba(0, 255, 0, 0.5);
+            transform: translateZ(-100px);
+        }
+        .box4{
+            background-color: rgba(137, 43, 226, 0.5);
+            /* transform: translateX(100px); */
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        .box5{
+            background-color: rgba(255, 140, 0, 0.5);
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        .box6{
+            background-color: rgba(47, 79, 79, 0.5);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="parent">
+            <div class="cube">
+                <div class="box2">FRONT</div>
+                <div class="box3">BACK</div>
+                <div class="box1">TOP</div>
+                 <div class="box4">BOTTOM</div>
+               
+                <div class="box5">LEFT</div>
+                 <div class="box6">RIGHT</div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

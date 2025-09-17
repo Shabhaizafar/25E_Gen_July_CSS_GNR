@@ -46,33 +46,61 @@
         }
 
         /* only Anchor Tag */
-        :link{
 
+        a:link{
+            color: brown;
         }
 
-        :visited{
-            
+        a:visited{
+            color: yellow;
         }
         
-        :active{
-            
+        a:active{
+            color: aqua;
         }
 
         /* Only Input */
-        :valid{
-            
+        input:valid{
+            background-color: lightcoral;
         }
 
         /*only Button and anchor  and input*/
-        :focus{
-           
+        input:focus{
+            background-color: lightgreen;
+            outline: 2px solid rgb(77, 219, 77);
+            border: 2px solid transparent;
+            border-radius: 5px;
         }
         /* 2. Spuedo Element Selector */
+        /* ::  */
+        /* h1::before{
+            content: 'Z';
+        }
+        h1::after{
+            content: 'Z';
+        } */
+
+        p::first-line{
+            background-color: aqua;
+        }
+        p::first-letter{
+            background-color: red;
+        }
+
     </style>
 
 </head>
 <body>
-    
+    <form action="">
+        <input type="text">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+    <br>
+    <a href="https://www.google.com">aerty</a>
+    <a href="https://www.htmldog.com">sdfgh</a>
+
     <h1>CSS</h1>
     <h2>JS</h2>
     <h3>C</h3>
@@ -83,3 +111,19 @@
     </div>
 </body>
 </html>
+
+<!-- 
+
+HTML CSS JS :
+https://www.htmldog.com/
+
+SQL + Python : 
+https://mode.com/
+
+
+JS : 
+https://www.javascripttutorial.net/
+
+Java : 
+https://javatutorial.net/
+-->

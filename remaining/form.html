@@ -25,7 +25,7 @@
             font-family: calibri;
             color: cyan;
             z-index: -1;
-            
+            gap: 5px;   
         }
         @keyframes loader {
             from{
@@ -35,7 +35,6 @@
             }   
         }
         form{
-            /* align-content: center; */
             border-radius: 8px;
             background-color: #021227;
             padding: 50px 40px;
@@ -44,18 +43,21 @@
             z-index: 2;
             position: relative;
         }
-        input:focus{
-            /* outline: none; */
-            outline: transparent;
-
-        }
+        
 
         input{
             background-color: transparent;
+            border-radius: 4px;
             border: none;
             width: 100%;
-            height: 50px;
-            padding: 5px;
+            padding: 10px 5px 5px;
+            position: relative;
+            z-index: 10;
+            color: transparent;
+        }
+        input:focus{
+            color: black;
+
         }
         h1{
             font-size: 24px;
@@ -65,6 +67,13 @@
         }
         div{
             position: relative;
+        }
+        .uname,.pwd{
+            height: 50px;
+            display: flex;
+            align-items: end;
+            flex-direction: column;
+            justify-content: end;
         }
         section{
             width: 150%;
@@ -96,14 +105,42 @@
             border-radius: 4px;
         }
         span{
-            color: gray;
-            font-size: 18px;
             position: absolute;
-            /* top: calc(50% - 1ex); */
-            top: 16px;
+            bottom: 5px;
+            left: 5px;
+            color: gray;
+            transition: all .5s;
         }
-        
-        
+        input:focus{
+            outline: none;
+        }
+        input:focus ~ span{
+            color: cyan;
+            transform: translateY(-25px);
+            font-size: 10px !important;
+        }
+        i{
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 0px;
+            background-color: aqua;
+            border-radius: 4px;
+            transition: all .5s;
+        }
+        input:focus ~ i{
+            height: 30px;
+        }
+        p{
+            color: gray;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            color: cyan;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -114,16 +151,18 @@
             <form action="">
             <h1>Sign In</h1>
             <div class="uname">
-                <span>Username</span>
                 <input type="text">
+                <span>Username</span>
+                <i></i>
             </div>
             <div class="pwd">
-                <span>Password</span>
                 <input type="password" name="">
+                <span>Password</span>
+                <i></i>
             </div>
                 
             <div class="more">
-
+                <p>Forgot Passowrd <a href="#">Sign up</a></p>
             </div>
             <div>
                 <button>Login</button>
@@ -134,3 +173,6 @@
 </body>
 
 </html>
+
+
+
