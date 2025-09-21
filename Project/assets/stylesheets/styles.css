@@ -1,0 +1,208 @@
+/* Universal Selector */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+/* Header */
+header{
+    background-color: gainsboro;
+}
+nav:first-child{
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+}
+nav:first-child  div:first-child{
+    display: flex;
+    gap: 60px;
+}
+nav:first-child  div:first-child a{
+    color: gray;
+    text-decoration: none;
+    font-family: calibri;
+    transition: all .2s;
+}
+nav:first-child  div:first-child a:hover{
+    color: rgb(250, 101, 177);
+}
+nav:first-child>div:last-child{
+    display: flex;
+    gap: 10px;
+}
+nav:first-child div:last-child div{
+    background-color: grey;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+}
+nav:first-child div:last-child div:hover{
+    background-color: rgb(250, 101, 177);
+}
+
+nav:last-child{
+    background-color: white;
+    box-shadow: 0px 5px 5px rgb(245, 242, 242);
+    padding: 0px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo a{
+    display: flex;
+    padding: 25px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: calibri;
+    font-size: 18px;
+}
+.active{
+    color: rgb(250, 101, 177) !important;
+}
+button.free{
+    color:  rgb(250, 101, 177);
+    background-color: transparent;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-family: calibri;
+    transition: all .4s;
+}
+button.free:hover{
+    background-color: rgb(250, 101, 177);
+    color: white;
+}
+
+.hero::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-image: url('/assets/images/slider-left-dec.jpg');
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+
+}
+.block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8% 10%;
+    gap: 60px;
+    font-family: verdana;
+    position: relative;
+}
+.hero .hero-right img{
+    width: 100%;
+}
+.block h3{
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+.hero .hero-left{
+    overflow: hidden;
+}
+.block h1{
+    font-size: 42px;
+    line-height: 50px;
+    padding-bottom: 15px;
+}
+.block p{
+    color: rgb(156, 154, 154);
+    font-size: 14px;
+    line-height: 35px;
+    padding-bottom: 15px;
+}
+
+.left-right{
+    animation-name: ls;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes ls {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+
+/* about */
+.about{
+    gap: 20px;
+}
+.about h1{
+    font-size: 32px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.about h1::before{
+    content: '';
+    background-color: #726ae3;
+    width: 100px;
+    padding: 1px;
+    position: absolute;
+    bottom: 0px;
+}
+.about-right a{
+    color: blue;
+}
+.about article{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.about article main{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.about article main aside{
+    background-color: white;
+    width: 92%;
+    height: 92%;
+    transform: translate(4%,4%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about article main aside span{
+    font-size: 32px;
+    font-weight: bolder;
+}
+.about article main aside i{
+    font-style: normal;
+}
+.about article main:nth-child(1){
+    background-image: conic-gradient(rgb(250, 101, 177) 324deg,transparent 324deg,transparent 360deg);
+}
+.about article main:nth-child(2){
+    background-image: conic-gradient(#726ae3 288deg,transparent 288deg,transparent 360deg);
+}
+.about article main:nth-child(3){
+    background-image: conic-gradient(rgb(250, 96, 40) 288deg,transparent 288deg,transparent 360deg);
+}
