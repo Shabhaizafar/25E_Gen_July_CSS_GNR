@@ -206,3 +206,78 @@ button.free:hover{
 .about article main:nth-child(3){
     background-image: conic-gradient(rgb(250, 96, 40) 288deg,transparent 288deg,transparent 360deg);
 }
+
+/* service-2 */
+
+
+.services{
+    grid-template-columns: 1fr;
+}
+.services .service-1{
+    text-align: center;
+}
+.service-1 h3{
+    color: #726ae3;
+}
+.service-1 h1{
+    font-size: 32px;
+    position: relative;
+}
+.service-1 h1 span{
+    color: #726ae3;
+}
+.service-1 h1::before{
+    content: '';
+    width: 100px;
+    padding: 1px;
+    background-color: #726ae3;
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 0px;
+}
+.service-2{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.service-2>aside{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 5px;
+}
+.service-2>aside:hover{
+    box-shadow: 2px 2px 10px gainsboro;
+}
+
+.temp{
+    background-color: white;
+    box-shadow: 2px 2px 10px gainsboro;
+    border-radius: 8px;
+}
+.temp>aside{
+    display: flex;
+    flex-wrap: wrap;
+}
+.temp>aside:last-child{
+    justify-content: center;
+    align-items: center;
+}
+.temp>aside h4{
+    color: rgb(250, 101, 177);
+    padding-bottom: 20px;
+}
+
+.temp>aside ul{
+    /* width: 64%; */
+    background-color: aqua;
+    font-size: 14px;
+}
+.temp>aside ul li{
+    float: left;
+}
